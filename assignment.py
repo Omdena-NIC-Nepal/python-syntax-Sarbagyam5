@@ -7,7 +7,8 @@ def format_string(name, age):
     Returns:
         str: Formatted string
     """
-    return f"{name} is {age} year old"
+    return f"My name is {name} and I am {age} years old"
+
 
 def conditional_check(number):
     """
@@ -18,11 +19,11 @@ def conditional_check(number):
         str: "Greater", "Lesser", or "Equal"
     """
     if number > 10:
-        return "it is greater than 10"
+        return "Greater"
     elif number == 10:
-        return "it is equal to 10"
+        return "Lesser"
     else:
-        return "it is lesser than 10"
+        return "Equal"
 
 def loop_sum(n):
     """
@@ -93,7 +94,10 @@ def arithmetic_ops(a, b):
     subtraction = a-b
     multiplication = a*b
     division = a/b
-    return addition, subtraction, multiplication,division
+    return {"Addition":addition,
+            "subtraction":subtraction,
+            "multiplication":multiplication,
+            "division":division}
 
 def logical_ops(x, y):
     """
@@ -108,7 +112,7 @@ def logical_ops(x, y):
     or_result = x or y
     not_x_result = not x
     not_y_result= not y
-    return and_result,or_result,not_x_result, not_y_result
+    return {"and":and_result,"or":or_result,"not_x":not_x_result,'"not_y"':not_y_result}
 
 def bitwise_ops(a, b):
     """
@@ -119,11 +123,10 @@ def bitwise_ops(a, b):
     Returns:
         dict: Results of bitwise operations
     """
-    and_result = a & b
-    or_result = a | b
-    xor_result = a ^ b
-    left_shift_a = a << 1
-    left_shift_b = b << 1
-    right_shift_a = a >> 1
-    right_shift_b = b >> 1
-    return and_result, or_result, xor_result, left_shift_a, left_shift_b, right_shift_a, right_shift_b
+    return { "and_result" : a & b,
+    "or_result" : a | b,
+    "xor_result" : a ^ b,
+    "left_shift_a" : a << 1,
+    "left_shift_b" : b << 1,
+    "right_shift_a" : a >> 1,
+    "right_shift_b" : b >> 1}
