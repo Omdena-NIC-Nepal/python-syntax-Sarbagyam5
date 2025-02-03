@@ -21,9 +21,9 @@ def conditional_check(number):
     if number > 10:
         return "Greater"
     elif number == 10:
-        return "Lesser"
-    else:
         return "Equal"
+    else:
+        return "Lesser"
 
 def loop_sum(n):
     """
@@ -94,10 +94,10 @@ def arithmetic_ops(a, b):
     subtraction = a-b
     multiplication = a*b
     division = a/b
-    return {"Addition":addition,
-            "subtraction":subtraction,
-            "multiplication":multiplication,
-            "division":division}
+    return {"sum":addition,
+            "difference":subtraction,
+            "product":multiplication,
+            "quotient":division}
 
 def logical_ops(x, y):
     """
@@ -123,10 +123,7 @@ def bitwise_ops(a, b):
     Returns:
         dict: Results of bitwise operations
     """
-    return { "and_result" : a & b,
-    "or_result" : a | b,
-    "xor_result" : a ^ b,
-    "left_shift_a" : a << 1,
-    "left_shift_b" : b << 1,
-    "right_shift_a" : a >> 1,
-    "right_shift_b" : b >> 1}
+    return { "and" : a & b,
+    "or" : a | b,
+    "xor" : a ^ b,
+    }
